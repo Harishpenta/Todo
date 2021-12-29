@@ -1,9 +1,9 @@
-package com.curious.notes.ui.viewmodels
+package com.curious.todo.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.curious.notes.db.Task
-import com.curious.notes.repositories.MainRepository
+import com.curious.todo.db.Task
+import com.curious.todo.repositories.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
