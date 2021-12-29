@@ -25,7 +25,7 @@
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
-        android:textSize="24dp" />
+        android:textSize="@dimen/font_25" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etDescriptionNote"
@@ -41,7 +41,7 @@
         android:overScrollMode="always"
         android:padding="10dp"
         android:scrollbarStyle="insideInset"
-        android:textSize="16dp" />
+        android:textSize="@dimen/font_15" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,6 +58,7 @@
             android:background="@color/purple_500"
             android:gravity="center"
             android:padding="10dp"
+            android:textSize="@dimen/font_12"
             android:text="Business"
             android:clickable="true"
             android:textColor="@color/white"
@@ -75,6 +76,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:clickable="true"
+            android:textSize="@dimen/font_12"
             android:text="Personal"
             android:textColor="@color/black"
             android:focusable="true" />
