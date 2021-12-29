@@ -7,8 +7,8 @@ object NotesUtility {
         val cl: Calendar = Calendar.getInstance()
         cl.timeInMillis = millis //here your time in miliseconds
         return "" + cl.get(Calendar.DAY_OF_MONTH).toString() +
-                ":" + cl.get(Calendar.MONTH)
-            .toString() + ":" + cl.get(Calendar.YEAR)
+                "-" + cl.get(Calendar.MONTH)
+            .toString() + "-" + cl.get(Calendar.YEAR)
     }
 
     fun convertMillisIntoDateObject(millis: Long): Date {
@@ -21,7 +21,7 @@ object NotesUtility {
         val cl: Calendar = Calendar.getInstance()
         cl.timeInMillis = millis //here your time in miliseconds
         return "" + cl.get(Calendar.HOUR_OF_DAY).toString() +
-                ":" + cl.get(Calendar.MINUTE)
-            .toString() + ":" + cl.get(Calendar.SECOND)
+                "-" + cl.get(Calendar.MINUTE)
+            .toString() + "-" + cl.get(Calendar.SECOND)
     }
 }

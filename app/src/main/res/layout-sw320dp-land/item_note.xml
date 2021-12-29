@@ -10,7 +10,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:button="@drawable/checkbox_selector" />
 
     <LinearLayout
@@ -38,9 +38,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
-                android:padding="10dp"
+                android:padding="12dp"
                 android:text="Title"
-                android:textSize="@dimen/font_15"
+                android:textSize="@dimen/font_14"
                 android:textStyle="normal" />
             <!--Text view for showing the options menu-->
             <TextView
@@ -60,10 +60,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:padding="10dp"
             android:text="20/12/2021"
-            android:textSize="@dimen/font_12" />
+            android:textSize="@dimen/font_11" />
 
 
     </LinearLayout>

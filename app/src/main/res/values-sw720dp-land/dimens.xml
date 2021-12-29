@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="font_10" type="dimen">15sp</item>
+    <item name="font_11" type="dimen">16sp</item>
+    <item name="font_12" type="dimen">17sp</item>
+    <item name="font_13" type="dimen">18sp</item>
+    <item name="font_14" type="dimen">19sp</item>
+    <item name="font_15" type="dimen">20sp</item>
+    <item name="font_20" type="dimen">25sp</item>
+    <item name="font_25" type="dimen">30sp</item>
+    <item name="font_35" type="dimen">40sp</item>
+    <item name="font_40" type="dimen">45sp</item>
+    <item name="font_50" type="dimen">55sp</item>
+    <item name="font_55" type="dimen">60sp</item>
+</resources>
