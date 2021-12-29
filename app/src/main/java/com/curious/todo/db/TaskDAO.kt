@@ -1,4 +1,4 @@
-package com.curious.notes.db
+package com.curious.todo.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

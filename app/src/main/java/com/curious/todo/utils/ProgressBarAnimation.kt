@@ -1,4 +1,4 @@
-package com.curious.notes.utils
+package com.curious.todo.utils
 
 import android.view.animation.Animation
 import android.view.animation.Transformation

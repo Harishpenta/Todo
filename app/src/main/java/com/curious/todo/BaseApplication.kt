@@ -1,4 +1,4 @@
-package com.curious.notes
+package com.curious.todo
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

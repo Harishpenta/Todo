@@ -1,4 +1,4 @@
-package com.curious.notes.ui
+package com.curious.todo.ui
 
 
 import android.graphics.Color
@@ -8,8 +8,8 @@ import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.curious.notes.R
-import com.curious.notes.db.Task
-import com.curious.notes.ui.viewmodels.MainViewModel
+import com.curious.todo.db.Task
+import com.curious.todo.ui.viewmodels.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_add_task.*

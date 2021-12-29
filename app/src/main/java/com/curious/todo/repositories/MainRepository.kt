@@ -1,7 +1,7 @@
-package com.curious.notes.repositories
+package com.curious.todo.repositories
 
-import com.curious.notes.db.Task
-import com.curious.notes.db.TaskDAO
+import com.curious.todo.db.Task
+import com.curious.todo.db.TaskDAO
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(private val taskDAO: TaskDAO) {

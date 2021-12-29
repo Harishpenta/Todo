@@ -1,4 +1,4 @@
-package com.curious.notes.utils
+package com.curious.todo.utils
 
 object Constants {
     const val NOTE_DATABASE_NAME ="note_db"

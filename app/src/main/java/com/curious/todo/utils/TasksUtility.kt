@@ -1,4 +1,4 @@
-package com.curious.notes.utils
+package com.curious.todo.utils
 
 import java.util.*
 

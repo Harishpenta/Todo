@@ -1,9 +1,9 @@
-package com.curious.notes.di
+package com.curious.todo.di
 
 import android.content.Context
 import androidx.room.Room
-import com.curious.notes.db.TaskDatabase
-import com.curious.notes.utils.Constants.NOTE_DATABASE_NAME
+import com.curious.todo.db.TaskDatabase
+import com.curious.todo.utils.Constants.NOTE_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.curious.notes.adapters
+package com.curious.todo.adapters
 
 import android.graphics.Color
 import android.graphics.Paint
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.curious.notes.R
-import com.curious.notes.db.Task
-import com.curious.notes.utils.TasksUtility
+import com.curious.todo.db.Task
+import com.curious.todo.utils.TasksUtility
 import kotlinx.android.synthetic.main.item_task.view.*
 import timber.log.Timber
 

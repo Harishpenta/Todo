@@ -1,4 +1,4 @@
-package com.curious.notes.ui
+package com.curious.todo.ui
 
 import android.content.Intent
 import android.graphics.Color
@@ -10,9 +10,9 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.curious.notes.R
-import com.curious.notes.adapters.TaskAdapter
-import com.curious.notes.db.Task
-import com.curious.notes.ui.viewmodels.MainViewModel
+import com.curious.todo.adapters.TaskAdapter
+import com.curious.todo.db.Task
+import com.curious.todo.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*

@@ -3,7 +3,7 @@
     package="com.curious.notes">
 
     <application
-        android:name=".BaseApplication"
+        android:name="com.curious.todo.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,10 +12,10 @@
         android:theme="@style/Theme.Notes">
         <activity
             android:theme="@style/Theme.Notes.Main"
-            android:name=".ui.AddNoteActivity"
+            android:name="com.curious.todo.ui.AddNoteActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.curious.todo.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Notes.Main">
             <intent-filter>
