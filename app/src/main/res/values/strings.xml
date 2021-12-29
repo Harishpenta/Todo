@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="business">Business</string>
+    <string name="personal">Personal</string>
+    <string name="today_s_tasks">Today\'s Tasks</string>
+    <string name="add_note">Add Note</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="what_s_up_harish">What\'s up, Harish</string>
 </resources>

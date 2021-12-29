@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="font_10" type="dimen">10sp</item>
+    <item name="font_10" type="dimen">8sp</item>
     <item name="font_11" type="dimen">11sp</item>
     <item name="font_12" type="dimen">12sp</item>
     <item name="font_13" type="dimen">13sp</item>
     <item name="font_14" type="dimen">14sp</item>
     <item name="font_15" type="dimen">15sp</item>
-    <item name="font_20" type="dimen">20sp</item>
+    <item name="font_20" type="dimen">15sp</item>
     <item name="font_25" type="dimen">25sp</item>
-    <item name="font_35" type="dimen">35sp</item>
+    <item name="font_35" type="dimen">25sp</item>
     <item name="font_40" type="dimen">40sp</item>
     <item name="font_50" type="dimen">50sp</item>
     <item name="font_55" type="dimen">55sp</item>
