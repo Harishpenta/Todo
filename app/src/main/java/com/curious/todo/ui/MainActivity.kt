@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.curious.notes.R
+import com.curious.todo.R
 import com.curious.todo.adapters.TaskAdapter
 import com.curious.todo.db.Task
 import com.curious.todo.ui.viewmodels.MainViewModel

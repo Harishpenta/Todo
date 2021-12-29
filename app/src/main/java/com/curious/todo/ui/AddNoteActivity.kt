@@ -7,7 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.curious.notes.R
+import com.curious.todo.R
 import com.curious.todo.db.Task
 import com.curious.todo.ui.viewmodels.MainViewModel
 import com.google.android.material.snackbar.Snackbar
@@ -55,7 +55,7 @@ class AddNoteActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
-        inflater.inflate(com.curious.notes.R.menu.menu, menu)
+        inflater.inflate(com.curious.todo.R.menu.menu, menu)
         return true
     }
 

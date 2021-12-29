@@ -1,4 +1,4 @@
-package com.curious.notes
+package com.curious.todo
 
 import org.junit.Test
 

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.curious.notes.R
+import com.curious.todo.R
 import com.curious.todo.db.Task
 import com.curious.todo.utils.TasksUtility
 import kotlinx.android.synthetic.main.item_task.view.*
