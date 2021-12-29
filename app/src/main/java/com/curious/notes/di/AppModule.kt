@@ -2,7 +2,7 @@ package com.curious.notes.di
 
 import android.content.Context
 import androidx.room.Room
-import com.curious.notes.db.NoteDatabase
+import com.curious.notes.db.TaskDatabase
 import com.curious.notes.utils.Constants.NOTE_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
@@ -17,9 +17,9 @@ object AppModule {
     @Provides
     @Singleton
     fun provideNoteDatabase(@ApplicationContext app: Context) =
-        Room.databaseBuilder(app, NoteDatabase::class.java, NOTE_DATABASE_NAME).build()
+        Room.databaseBuilder(app, TaskDatabase::class.java, NOTE_DATABASE_NAME).build()
 
     @Provides
     @Singleton
-    fun provideNoteDAO(db: NoteDatabase) = db.getNoteDAO()
+    fun provideNoteDAO(db: TaskDatabase) = db.getNoteDAO()
 }

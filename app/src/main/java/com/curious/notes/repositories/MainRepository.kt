@@ -1,23 +1,23 @@
 package com.curious.notes.repositories
 
-import com.curious.notes.db.Note
-import com.curious.notes.db.NoteDAO
+import com.curious.notes.db.Task
+import com.curious.notes.db.TaskDAO
 import javax.inject.Inject
 
-class MainRepository @Inject constructor(private val noteDAO: NoteDAO) {
-    suspend fun addNote(note: Note) = noteDAO.addNote(note)
+class MainRepository @Inject constructor(private val taskDAO: TaskDAO) {
+    suspend fun addNote(task: Task) = taskDAO.addNote(task)
 
-    suspend fun deleteNote(note: Note) = noteDAO.deleteNote(note)
+    suspend fun deleteNote(task: Task) = taskDAO.deleteNote(task)
 
-    suspend fun setNoteAsCompleted(id : Int, isCompleted :Boolean) = noteDAO.setNoteAsCompleted(id,isCompleted)
+    suspend fun setNoteAsCompleted(id : Int, isCompleted :Boolean) = taskDAO.setNoteAsCompleted(id,isCompleted)
 
-    fun getAllNotes() = noteDAO.getAllNotes()
+    fun getAllNotes() = taskDAO.getAllNotes()
 
-    fun getAllBusinessNotes() = noteDAO.getAllBusinessNotes()
+    fun getAllBusinessNotes() = taskDAO.getAllBusinessNotes()
 
-    fun getAllPersonalNotes() = noteDAO.getAllPersonalNotes()
+    fun getAllPersonalNotes() = taskDAO.getAllPersonalNotes()
 
-    fun getAllBusinessCompletedNotes() = noteDAO.getAllBusinessCompletedNotes()
+    fun getAllBusinessCompletedNotes() = taskDAO.getAllBusinessCompletedNotes()
 
-    fun getAllPersonalCompletedNotes() = noteDAO.getAllPersonalCompletedNotes()
+    fun getAllPersonalCompletedNotes() = taskDAO.getAllPersonalCompletedNotes()
 }

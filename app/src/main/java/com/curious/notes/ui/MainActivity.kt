@@ -10,8 +10,8 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.curious.notes.R
-import com.curious.notes.adapters.NoteAdapter
-import com.curious.notes.db.Note
+import com.curious.notes.adapters.TaskAdapter
+import com.curious.notes.db.Task
 import com.curious.notes.ui.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +20,7 @@ import java.util.*
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels()
-    lateinit var noteAdapter: NoteAdapter
+    lateinit var taskAdapter: TaskAdapter
     private var totalBusinessNotes = 0
     private var totalPersonalNotes = 0
     private var totalPersonalCompletedNotes = 0
@@ -48,28 +48,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerview() {
-        noteAdapter = NoteAdapter(
+        taskAdapter = TaskAdapter(
             onItemCheckListener = this::onItemCheck,
             onOptionsMenuSelection = ::onOptionMenuSelection
         )
-        rvNotes.adapter = noteAdapter
+        rvNotes.adapter = taskAdapter
         rvNotes.layoutManager = LinearLayoutManager(this)
     }
 
-    private fun onItemCheck(isChecked: Boolean, note: Note) {
-        viewModel.setAsCompletedNote(note.id, isChecked)
+    private fun onItemCheck(isChecked: Boolean, task: Task) {
+        viewModel.setAsCompletedNote(task.id, isChecked)
         setBusinessProgress(totalBusinessCompletedNotes)
         setPersonalProgress(totalPersonalNotes)
     }
 
-    private fun onOptionMenuSelection(position: Int, note: Note) {
-        performOptionsMenuClick(position, note)
+    private fun onOptionMenuSelection(position: Int, task: Task) {
+        performOptionsMenuClick(position, task)
     }
 
     private fun subscribeToObservers() {
         viewModel.allNotes.observe(this, androidx.lifecycle.Observer {
             it?.let {
-                noteAdapter.setList(it)
+                taskAdapter.setList(it)
             }
         })
 
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun performOptionsMenuClick(position: Int, note: Note) {
+    private fun performOptionsMenuClick(position: Int, task: Task) {
         // create object of PopupMenu and pass context and view where we want
         // to show the popup menu
         val popupMenu = PopupMenu(this, rvNotes[position].findViewById(R.id.lblNoteOptionsMenu))
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
                 when (item?.itemId) {
                     R.id.pmDeleteNote -> {
                         // here are the logic to delete an item from the list
-                        viewModel.deleteNote(note)
+                        viewModel.deleteNote(task)
                         return true
                     }
                     // in the same way you can implement others

@@ -2,7 +2,7 @@ package com.curious.notes.utils
 
 import java.util.*
 
-object NotesUtility {
+object TasksUtility {
     fun convertMillisIntoDateString(millis: Long): String {
         val cl: Calendar = Calendar.getInstance()
         cl.timeInMillis = millis //here your time in miliseconds

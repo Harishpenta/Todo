@@ -7,10 +7,10 @@
 
     <CheckBox
         android:id="@+id/checkb"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:button="@drawable/checkbox_selector" />
 
     <LinearLayout
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
-                android:padding="12dp"
+                android:padding="8dp"
                 android:text="Title"
                 android:textSize="@dimen/font_14"
                 android:textStyle="normal" />

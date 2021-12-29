@@ -1,27 +1,28 @@
 package com.curious.notes.adapters
 
+import android.graphics.Color
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.curious.notes.R
-import com.curious.notes.db.Note
-import com.curious.notes.utils.NotesUtility
-import kotlinx.android.synthetic.main.item_note.view.*
+import com.curious.notes.db.Task
+import com.curious.notes.utils.TasksUtility
+import kotlinx.android.synthetic.main.item_task.view.*
 import timber.log.Timber
 
-class NoteAdapter(
-    private val onItemCheckListener: (isChecked: Boolean, note: Note) -> Unit,
-    private val onOptionsMenuSelection: (position: Int, note: Note) -> Unit
+class TaskAdapter(
+    private val onItemCheckListener: (isChecked: Boolean, task: Task) -> Unit,
+    private val onOptionsMenuSelection: (position: Int, task: Task) -> Unit
 ) :
-    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+    RecyclerView.Adapter<TaskAdapter.NoteViewHolder>() {
     private var selectedPos = RecyclerView.NO_POSITION
-    private val noteList = ArrayList<Note>()
+    private val noteList = ArrayList<Task>()
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    fun setList(artists: List<Note>) {
+    fun setList(artists: List<Task>) {
         noteList.clear()
         noteList.addAll(artists)
         notifyDataSetChanged()
@@ -31,7 +32,7 @@ class NoteAdapter(
         return NoteViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(
-                    R.layout.item_note,
+                    R.layout.item_task,
                     parent,
                     false
                 )
@@ -43,17 +44,15 @@ class NoteAdapter(
         Timber.d(note.toString())
         holder.itemView.apply {
             lblTitle.text = note.title
-//            if (note.type == "B") {
-//                lblNoteType.text = "B"
-//                lblNoteType.setBackgroundResource(R.drawable.business_circle_shape)
-//            } else {
-//                lblNoteType.text = "P"
-//                lblNoteType.setBackgroundResource(R.drawable.personal_circle_shape)
-//            }
-            lblNoteDate.text = NotesUtility.convertMillisIntoDateString(note.createdDate)
+            lblNoteDate.text = TasksUtility.convertMillisIntoDateString(note.createdDate)
+            lblNoteDesc.text = note.description
             if (note.isCompleted) {
+                lblTitle.setTextColor(Color.parseColor("#C2C0C0"))
+                lblNoteDesc.setTextColor(Color.parseColor("#C2C0C0"))
                 lblTitle.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
             } else {
+                lblTitle.setTextColor(Color.parseColor("#000000"))
+                lblNoteDesc.setTextColor(Color.parseColor("#000000"))
                 lblTitle.paintFlags = lblTitle.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
             }
             checkb.setOnCheckedChangeListener(null)

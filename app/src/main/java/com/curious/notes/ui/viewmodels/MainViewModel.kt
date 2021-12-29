@@ -2,7 +2,7 @@ package com.curious.notes.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.curious.notes.db.Note
+import com.curious.notes.db.Task
 import com.curious.notes.repositories.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -19,12 +19,12 @@ class MainViewModel @Inject constructor(private val mainRepository: MainReposito
 //    val allPersonalCompletedList =
 //        fun(isCompleted: Boolean) = mainRepository.getAllPersonalCompletedNotes(isCompleted)
 
-    fun addNote(note: Note) = viewModelScope.launch {
-        mainRepository.addNote(note)
+    fun addNote(task: Task) = viewModelScope.launch {
+        mainRepository.addNote(task)
     }
 
-    fun deleteNote(note: Note) = viewModelScope.launch {
-        mainRepository.deleteNote(note)
+    fun deleteNote(task: Task) = viewModelScope.launch {
+        mainRepository.deleteNote(task)
     }
 
     fun setAsCompletedNote(id: Int?, isCompleted: Boolean) = viewModelScope.launch {

@@ -8,11 +8,11 @@ import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.curious.notes.R
-import com.curious.notes.db.Note
+import com.curious.notes.db.Task
 import com.curious.notes.ui.viewmodels.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_add_note.*
+import kotlinx.android.synthetic.main.activity_add_task.*
 import timber.log.Timber
 import java.util.*
 
@@ -24,7 +24,7 @@ class AddNoteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_note)
+        setContentView(R.layout.activity_add_task)
         toolbarAddNote.title = ""
         setSupportActionBar(toolbarAddNote)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -96,7 +96,7 @@ class AddNoteActivity : AppCompatActivity() {
             return false
 
         }
-        val note = Note(
+        val note = Task(
             enteredNoteText,
             noteDesc,
             date,

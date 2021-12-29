@@ -56,11 +56,21 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/lblNoteDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
             android:id="@+id/lblNoteDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:paddingLeft="10dp"
+            android:layout_marginTop="3dp"
             android:paddingRight="10dp"
             android:text="20/12/2021"
             android:textSize="@dimen/font_12" />

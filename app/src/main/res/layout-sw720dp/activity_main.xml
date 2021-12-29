@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:letterSpacing="0.05"
-            android:text="What's up, Harish"
+            android:text="@string/what_s_up_harish"
             android:textColor="@color/black"
             android:textSize="@dimen/font_35"
             android:textStyle="bold" />
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CATEGORIES"
+            android:text="@string/categories"
             android:textSize="@dimen/font_20" />
 
     </LinearLayout>
@@ -55,13 +55,12 @@
                     android:id="@+id/lblTotalBusinessTasks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="40 tasks"
                     android:textSize="@dimen/font_14" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Business"
+                    android:text="@string/business"
                     android:textColor="@color/purple_500"
                     android:textSize="@dimen/font_20"
                     android:textStyle="bold" />
@@ -85,13 +84,12 @@
                     android:id="@+id/lblTotalPersonalTasks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18 tasks"
                     android:textSize="@dimen/font_14" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personal"
+                    android:text="@string/personal"
                     android:textColor="@color/teal_700"
                     android:textSize="@dimen/font_20"
                     android:textStyle="bold" />
@@ -116,7 +114,7 @@
         android:layout_below="@+id/llSegmentTypeBlock"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Today's Tasks"
+        android:text="@string/today_s_tasks"
         android:textSize="@dimen/font_20" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -138,6 +136,8 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="@color/teal_200"
-        android:src="@android:drawable/ic_input_add" />
+        android:contentDescription="@string/add_note"
+        android:src="@drawable/ic_fab_add"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </RelativeLayout>
